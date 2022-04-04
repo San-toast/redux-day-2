@@ -11,6 +11,7 @@ export default function Cart() {
       {cart?.map((item) => (
         <CartItem product={item} />
       ))}
+      <a href="/">Return to Products</a>
     </div>
   );
 }

@@ -7,7 +7,6 @@ export default function ProductContainer() {
 
   return (
     <div className="productContainer">
-      <h1>Product Container</h1>
       {products?.map((product) => (
         <Products product={product} />
       ))}

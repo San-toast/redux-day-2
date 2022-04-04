@@ -4,26 +4,27 @@
   height: auto;
 }
 .LayoutContainer {
+  width: 100%;
   display: flex;
   margin-top: 3rem;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  line-height: 1.5;
 }
-.productContainer,
-.cart {
-  height: auto;
-  width: 100%;
-  min-height: 29rem;
+.productContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   border: 3px solid black;
 }
-.cartProduct {
-  display: flex;
-  justify-content: space-between;
-}
+
 .productImage {
   height: 5rem;
 }
 .singleProduct {
-  display: flex;
-  justify-content: space-between;
+  flex: 1 1 21rem;
+  margin: 10px 20px;
+
+  padding: 10px 20px;
 }

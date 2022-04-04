@@ -7,6 +7,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const dispatch = useDispatch();
+  const reset = (dispatch, product) => {
+    dispatch({ type: "RESET", payload: product });
+  };
   return (
     <div className="App">
       <ToastContainer
@@ -21,10 +24,12 @@ function App() {
         pauseOnHover
       />
       <h1>Joe's Handy Dandy Tools 🧰</h1>
+      <button onClick={() => reset(dispatch)}>RESET</button>
+      <h1>Products</h1>
       <div className="LayoutContainer">
         <ProductContainer />
-        <Cart />
       </div>
+      <a href="/cart">View Cart</a>
     </div>
   );
 }

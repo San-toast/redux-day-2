@@ -13,6 +13,7 @@ export default function Products(props) {
     <div className="singleProduct">
       <img className="productImage" src={props?.product?.img} alt="" />
       <h4>{props?.product?.name}</h4>
+      <p>${props?.product?.price}</p>
       <button onClick={() => addToCart(dispatch, props.product)}>
         Add To Cart
       </button>
