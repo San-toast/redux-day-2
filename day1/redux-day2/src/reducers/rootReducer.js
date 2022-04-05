@@ -17,6 +17,11 @@ const initialState = {
       price: 7,
     },
     {
+      name: "Drill Bit",
+      img: "https://images.unsplash.com/photo-1569338270981-4159a7818c13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
+      price: 7,
+    },
+    {
       name: "Tool Box",
       img: "https://images.unsplash.com/photo-1585569695919-db237e7cc455?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       price: 7,
@@ -27,7 +32,6 @@ const initialState = {
       price: 7,
     },
   ],
-  wallet: {},
   cart: [],
 };
 
@@ -43,6 +47,12 @@ function rootReducer(state = initialState, action) {
       return {
         ...initialState,
       };
+    case "REMOVE":
+      return {
+        ...state,
+        cart: state.cart.filter((item) => item !== action.payload),
+      };
+
     default:
       return state;
   }

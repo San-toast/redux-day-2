@@ -1,9 +1,14 @@
-.App {
+body {
+  background-color: gainsboro;
+}
+.App,
+.notApp {
   text-align: center;
-  border: 3px solid black;
+
   height: auto;
 }
-.LayoutContainer {
+.LayoutContainer,
+.cartLayout {
   width: 100%;
   display: flex;
   margin-top: 3rem;
@@ -12,19 +17,36 @@
   line-height: 1.5;
 }
 .productContainer {
+  background-color: whitesmoke;
+  width: 50%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   border: 3px solid black;
 }
 
+.cart {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  width: 50%;
+  min-height: 29rem;
+  border: 3px solid black;
+}
 .productImage {
   height: 5rem;
 }
 .singleProduct {
-  flex: 1 1 21rem;
   margin: 10px 20px;
-
+  padding: 10px 20px;
+  width: 20rem;
+}
+.cartProduct {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  height: 3rem;
+  margin: 10px 20px;
   padding: 10px 20px;
 }
